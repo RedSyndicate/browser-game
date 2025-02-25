@@ -11,7 +11,7 @@ export async function POST({ request }): Promise<Response> {
     const plots: Plot[] = await new Response(data.get('plots')).json();
 
     if (!world || !regions || !tiles || !plots) {
-        throw fail(400, { invalid: true, message: 'Some properties were invalid or were not provided.' })
+        fail(400, { invalid: true, message: 'Some properties were invalid or were not provided.' })
     }
 
     const result = await db.$transaction([
@@ -39,7 +39,7 @@ export async function POST({ request }): Promise<Response> {
     ])
 
     if (!result)
-        throw fail(500, { invalid: true, message: 'DB Transaction failed' })
+        fail(500, { invalid: true, message: 'DB Transaction failed' })
 
     return json({ result }, {});
 };

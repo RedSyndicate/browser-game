@@ -13,7 +13,7 @@ export async function POST({ request, locals }): Promise<Response> {
     if (!serverData ||
         !worldData ||
         !profileData) {
-        throw fail(400, { invalid: true, message: 'Some properties were invalid or were not provided.' })
+        fail(400, { invalid: true, message: 'Some properties were invalid or were not provided.' })
     }
 
     // choose a random tile to settle in for now

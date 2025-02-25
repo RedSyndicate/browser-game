@@ -23,7 +23,7 @@ export const load = (async ({ params }) => {
     })
 
     if (!settlement)
-        throw fail(404, { invalid: true, params: params.id })
+        fail(404, { invalid: true, params: params.id })
 
     const structures = await db.structure.findMany();
 

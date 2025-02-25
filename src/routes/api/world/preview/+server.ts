@@ -40,7 +40,7 @@ export async function POST({ request }): Promise<Response> {
         !elevationOptions ||
         !precipitationOptions ||
         !temperatureOptions) {
-        throw fail(400, { invalid: true, message: 'Some properties were invalid or were not provided.' })
+        fail(400, { invalid: true, message: 'Some properties were invalid or were not provided.' })
     }
 
     mapSettings = JSON.parse(mapOptions.toString());

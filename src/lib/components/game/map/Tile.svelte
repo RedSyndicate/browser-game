@@ -36,7 +36,7 @@
 		const biome = biomes.find((b) => b.id === tile.biomeId);
 
 		if (!biome) {
-			throw fail(400, { message: 'Invalid biomeId provided' });
+			fail(400, { message: 'Invalid biomeId provided' });
 		}
 
 		switch (biome.name) {

@@ -14,7 +14,7 @@ export const handle: Handle = (async ({ event, resolve }) => {
     //         IsDatabaseInitialized = true;
     //     }
     //     catch (e) {
-    //         throw redirect(307, `/admin/init`);
+    //         redirect(307, `/admin/init`);
     //     }
 
     // if not, start initialization process

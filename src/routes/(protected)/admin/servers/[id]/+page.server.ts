@@ -19,7 +19,7 @@ export const load: PageServerLoad = async ({ params }) => {
     });
 
     if (!server) {
-        throw fail(404, { success: false, id: params.id })
+        fail(404, { success: false, id: params.id })
     }
 
     return {
