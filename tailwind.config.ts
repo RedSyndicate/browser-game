@@ -1,9 +1,6 @@
 import { join } from 'path';
 import type { Config } from 'tailwindcss';
 
-// 1. Import the Skeleton plugin
-import { skeleton } from '@skeletonlabs/tw-plugin';
-
 const config = {
 	// 2. Opt for dark mode to be handled via the class method
 	darkMode: 'class',
@@ -22,11 +19,6 @@ const config = {
 		// 4. Append the Skeleton plugin (after other plugins)
 		require("@tailwindcss/forms"),
 		require("@tailwindcss/typography"),
-		skeleton({
-			themes: {
-				preset: ["skeleton", "modern", "crimson"]
-			}
-		}),
 	]
 } satisfies Config;
 

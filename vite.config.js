@@ -1,6 +1,5 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
-import { purgeCss } from 'vite-plugin-tailwind-purgecss';
 import { sveltekit } from '@sveltejs/kit/vite';
 import dotenv from "dotenv";
 
@@ -13,7 +12,6 @@ const config = defineConfig({
 	},
 	plugins: [
 		sveltekit(),
-		purgeCss()
 	],
 	server: {
 		port: 3000
